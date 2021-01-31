@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SIMP", "SIMP.njsproj", "{A14E1CD7-5DC5-43E1-A4E8-7F284F4DCCC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A14E1CD7-5DC5-43E1-A4E8-7F284F4DCCC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14E1CD7-5DC5-43E1-A4E8-7F284F4DCCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14E1CD7-5DC5-43E1-A4E8-7F284F4DCCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14E1CD7-5DC5-43E1-A4E8-7F284F4DCCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B132AE3-9A72-4F74-A830-394097ED417B}
+	EndGlobalSection
+EndGlobal

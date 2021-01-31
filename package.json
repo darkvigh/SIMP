@@ -1,0 +1,12 @@
+{
+  "name": "simp",
+  "version": "0.0.0",
+  "description": "SIMP",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "node.js": "0.0.1-security"
+  }
+}
