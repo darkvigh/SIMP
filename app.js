@@ -10,13 +10,13 @@ pickGame()
 
 function pickGame() {
 
-    rl.question("Pick a game! [Flip] [Roulette] {", (game) => {
+    rl.question("Pick a game! [Flip] [Roulette] ", (game) => {
 
         if (game.toLowerCase() == "flip") {
-            flipFile();
+            flipFile(fs, rl);
         } else {
             if (game.toLowerCase() == "roulette") {
-                rouletteGame();
+                rouletteGame(fs, rl);
             } else {
                 console.log("Please pick a valid game!");
                 pickGame();

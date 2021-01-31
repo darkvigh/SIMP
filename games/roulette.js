@@ -1,15 +1,5 @@
-module.exports = () => {
-    const fs = require("fs");
-    const readline = require("readline");
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-    const rannum = Math.floor((Math.random() * 4) + 1);
-    const a = ['yellow', 'red', 'black', 'white']
-    let result = a[rannum]
-    //let b = a.replace(",", " ");
-    
+module.exports = (fs, rl) => {
+      
 
 
     function writetofile(towrite) {
@@ -31,9 +21,12 @@ module.exports = () => {
 
 
             function roulette() {
-                rl.question(`Please choose a colour between Yellow, Red, Black, White,`, (choice) => {
+                let rannum = Math.floor((Math.random() * 4) + 1);
+                const a = ['yellow', 'red', 'black', 'white']
+                let result = a[rannum]
+                rl.question(`[${obj.a}] Please choose a colour between [Yellow] [Red] [Black] [White] `, (choice) => {
                     if (choice.toLowerCase() == "yellow" || choice.toLowerCase() == "red" || choice.toLowerCase() == "black" || choice.toLowerCase() == "white") {
-                        rl.question(`You currently have $${obj.a} how much would you like to bet?`, (bet) => {
+                        rl.question(`You currently have [$${obj.a}] how much would you like to bet? `, (bet) => {
                             if (bet.includes("-")) {
                                 console.log("***DONT EVEN THINK ABOUT IT!***")
                                 rl.close();
@@ -44,9 +37,9 @@ module.exports = () => {
                                     obj.a = final
                                     writetofile(obj);
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    console.log(`Congrats!, You bet on ${result} with $${bet} And won! Your current balance is $${obj.a}`);
+                                    console.log(`Congrats!, You bet on [${result}] with [$${bet}] And won! Your current balance is [$${obj.a}] `);
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    rl.question(`Do you want to play again? "Y"? "N"?`, (y) => {
+                                    rl.question(`Would you like to play again? [Y] [N] `, (y) => {
                                         if (y.toLowerCase() == "y") {
                                             roulette()
                                         } else {
@@ -62,9 +55,9 @@ module.exports = () => {
                                     obj.a = final
                                     writetofile(obj);
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    console.log(`Too bad!, You bet on ${choice} With $${bet} And lost! Your current balance is $${obj.a}`);
+                                    console.log(`[${result}] Too bad!, You bet on [${choice}] With [$${bet}] And lost! Your current balance is [$${obj.a}]`);
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    rl.question(`Do you want to try again? "Y"? "N"?`, (y) => {
+                                    rl.question(`Would you like to try again? [Y] [N] `, (y) => {
                                         if (y.toLowerCase() == "y") {
                                             roulette()
                                         } else {
@@ -79,9 +72,9 @@ module.exports = () => {
                             } else {
                                 if (bet => obj.a) {
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    console.log(`*INSUFFICIENT FUNDS!* You Have $${obj.a}, You Need $${bet}. `)
+                                    console.log(`*INSUFFICIENT FUNDS!* You Have [$${obj.a}], You Need [$${bet}]. `)
                                     console.log("_______________________________________________________________________________________________________________________")
-                                    rl.question(`Would you like to return? "Y"? "N"?`, (y) => {
+                                    rl.question(`Would you like to return? [Y] [N] `, (y) => {
                                         if (y.toLowerCase() == "y") {
                                             roulette()
                                         }
@@ -96,7 +89,7 @@ module.exports = () => {
                         }
 							})				                               
                     } else {
-                console.log(`"${choice}" Is not a valid colour`);
+                console.log(`[${choice}] Is not a valid colour`);
             }
         
                 });
