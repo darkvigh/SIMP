@@ -29,16 +29,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
-    <Content Include="Currency.json" />
+    <Content Include="config\login.js" />
     <Content Include="games\flip.js" />
     <Content Include="games\roulette.js" />
+    <Content Include="Json\login.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="test.js" />
-    <Content Include="test2.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="games\" />
+    <Folder Include="Json\" />
+    <Folder Include="config\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

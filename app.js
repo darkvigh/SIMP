@@ -6,20 +6,20 @@ const rl = readline.createInterface({
 });
 const flipFile = require('./games/flip.js');
 const rouletteGame = require('./games/roulette.js');
-pickGame()
+const login = require(`./config/login.js`)
 
-function pickGame() {
-
+login(fs, rl, pg)
+function pg(uName) {
     rl.question("Pick a game! [Flip] [Roulette] ", (game) => {
 
         if (game.toLowerCase() == "flip") {
-            flipFile(fs, rl);
+            flipFile(fs, rl, uName);
         } else {
             if (game.toLowerCase() == "roulette") {
-                rouletteGame(fs, rl);
+                rouletteGame(fs, rl, uName);
             } else {
                 console.log("Please pick a valid game!");
-                pickGame();
+                pg();
             }
         }
 
